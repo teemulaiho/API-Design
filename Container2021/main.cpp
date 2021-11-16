@@ -3,11 +3,16 @@
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv) noexcept {
 	
-	Container<int> poop{ 1, 2, 3, 4 };
-	
-	Container<int> container_a(1);
-	Container<int> container_b(2);
+	Container<int> container{ 1, 2, 3, 4 };
 
-	container_b = container_a;
+	for (auto c : container)
+	{
+		std::cout << c << "\n";
+	}
+
+	int sum = std::accumulate(container.begin(), container.end(), 0);
+
+	std::cout << sum << "\n";
+
 	return 0;
 }

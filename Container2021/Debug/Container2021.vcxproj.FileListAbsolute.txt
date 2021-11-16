@@ -1,0 +1,2 @@
+C:\Users\teemu\source\repos\Container2021\API-Design\Debug\Container2021.exe.lastcodeanalysissucceeded
+C:\Users\teemu\source\repos\Container2021\API-Design\Container2021\Debug\NativeCodeAnalysis.read.1.tlog

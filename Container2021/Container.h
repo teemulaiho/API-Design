@@ -20,7 +20,7 @@ public:
 
 	explicit Container(std::initializer_list<T> l) : 
 		_data{ new value_type[l.size()] }, _size{ l.size()} {
-				std::copy(l.begin(), l.end(), begin());
+				std::ranges::copy(l, begin());
 	}
 
 	// Constructor
