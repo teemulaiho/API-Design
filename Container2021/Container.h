@@ -96,7 +96,7 @@ public:
 		return _size;	
 	}
 
-	value_type* data() const noexcept {
+	pointer data() const noexcept {
 		return _data;
 	}
 
@@ -114,6 +114,6 @@ public:
 	}
 
 private:
-	T* _data = nullptr;
+	pointer _data = nullptr;
 	size_type _size = 0;
 };
