@@ -10,7 +10,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv) noexcept {
 		std::cout << c << "\n";
 	}
 
-	int sum = std::accumulate(container.begin(), container.end(), 0);
+	auto sum = std::accumulate(container.begin(), container.end(), 0);
 
 	std::cout << sum << "\n";
 
