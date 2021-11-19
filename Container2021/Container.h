@@ -4,6 +4,10 @@
 #include <memory>
 #include <numeric>
 
+// Make a namespace for the Container
+// Take out functions that can be free functions out of the class.
+// Also try adding functions such as insert, pushback, append (+), resize & etc.
+
 template<typename T>
 class Container {
 public:
