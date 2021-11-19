@@ -1,6 +1,7 @@
 #pragma once
 #include <algorithm>
 #include <stdexcept>
+#include <memory>
 #include <numeric>
 
 template<typename T>
@@ -12,20 +13,21 @@ public:
 	using const_iterator = const iterator*;
 	using reference = value_type&;
 	using const_reference = const value_type&;
+	//using pointer = std::unique_ptr<T[]>;
 	using pointer = value_type*;
 	using const_pointer = const pointer;
 
 	// Empty Default Constructor
 	Container() = default;
 
-	explicit Container(std::initializer_list<T> l) : 
-		_data{ new value_type[l.size()] }, _size{ l.size()} {
-				std::ranges::copy(l, begin());
+	explicit Container(std::initializer_list<value_type> list) :
+		_data{ std::make_unique<value_type[]>(list.size()) }, _size{list.size()}{
+		std::ranges::copy(list, begin());
 	}
 
 	// Constructor
 	explicit Container(size_type size, const value_type& val = {}) :
-		_data{ new value_type[size] }, _size{ size } {
+		_data{ std::make_unique<value_type[]>(size) }, _size{ size } {
 		std::fill(begin(), end(), val);
 	}
 
@@ -43,10 +45,12 @@ public:
 
 	// Copy Assignment Operator
 	Container& operator=(const Container& other) {
-		delete[] _data;
-		_size = other._size;
-		_data = new value_type[other._size];
-		std::copy(other._data, other._data + other._size, _data);
+		auto temp = std::make_unique<value_type[]>(other.size());
+		std::copy(other.begin(), other.end(), temp.get());
+		_data.reset(temp.release());
+		//TODO: check the semantics of ownership transfer when resetting using a unique_prt as a pointer.
+		// also the aissgment operator
+		_size = other.size();
 		return *this;
 	}
 
@@ -72,12 +76,12 @@ public:
 		return _data[index];
 	}
 
-	bool empty() const noexcept {
+	constexpr bool empty() const noexcept {
 		return _size == 0;
 	}
 
-	void clear() noexcept {
-		delete[] _data;
+	constexpr void clear() noexcept {
+		_data.reset(nullptr);
 		_size = 0;
 	}
 
@@ -92,28 +96,24 @@ public:
 		return _data[_size - 1];
 	}
 
-	size_type size() const noexcept {
+	constexpr size_type size() const noexcept {
 		return _size;	
 	}
 
-	pointer data() const noexcept {
+	constexpr pointer data() const noexcept {
 		return _data;
 	}
 
-	iterator end() const noexcept {
-		return _data + _size;
+	constexpr iterator begin() const noexcept {
+		return _data.get();
 	}
 
-	iterator begin() const noexcept {
-		return _data;
-	}
-
-	// Destructor
-	~Container() noexcept {
-		delete[] _data;
+	constexpr iterator end() const noexcept {
+		[[gsl::suppress(bounds.1, justification:"Container is a spawn.")]]
+		return _data.get() + _size;
 	}
 
 private:
-	pointer _data = nullptr;
+	std::unique_ptr<value_type[]> _data = nullptr;
 	size_type _size = 0;
 };
