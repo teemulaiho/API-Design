@@ -4,13 +4,13 @@ struct Image
 {
 	Image();
 	Image(const Image& rhs);
-	Image(unsigned int id, int width, int height);
+	Image(unsigned int p_id, int p_width, int p_height);
 
-	unsigned int id;
-	int width;
-	int height;
+	int m_id;
+	unsigned int m_width;
+	unsigned int m_height;
 
-	unsigned int GetID();
-	int GetWidth();
-	int GetHeight();
+	int GetID();
+	unsigned int GetWidth();
+	unsigned int GetHeight();
 };

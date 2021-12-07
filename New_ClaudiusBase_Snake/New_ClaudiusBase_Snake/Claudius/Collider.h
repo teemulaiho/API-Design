@@ -6,9 +6,9 @@ struct Collider
 {
 	Collider();
 	Collider(const Collider& rhs);
-	Collider(int x, int y, int w, int h);
+	Collider(int p_x, int p_y, int p_w, int p_h);
 
-	void SetBounds(int x, int y, int w, int h);
+	void SetBounds(int p_x, int p_y, int p_w, int p_h);
 
-	Rectangle rect;
+	Rectangle m_rect;
 };

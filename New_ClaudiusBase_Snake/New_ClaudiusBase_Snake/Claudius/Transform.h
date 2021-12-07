@@ -6,11 +6,11 @@ struct Transform
 {
 	Transform();
 	Transform(const Transform& rhs);
-	Transform(float x, float y, float rotation);
+	Transform(float p_x, float p_y, float p_rotation);
 	
-	void SetPosition(const float x, const float y);
-	void ChangePosition(const float x, const float y);
-	void SetRotation(const float rotation);
+	void SetPosition(const float p_x, const float p_y);
+	void ChangePosition(const float p_x, const float p_y);
+	void SetRotation(const float p_rotation);
 	void ChangeRotation(const float rotation);
 
 	Vector2 GetPosition();
@@ -18,6 +18,6 @@ struct Transform
 	float GetY();
 	float GetRotation();
 
-	Vector2 position;
-	float rotation;
+	Vector2 m_position;
+	float m_rotation;
 };

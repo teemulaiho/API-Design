@@ -5,6 +5,7 @@
 #include "KeyCode.h"
 #include "Apple.h"
 #include "Player.h"
+#include "SDL_stdinc.h"
 
 struct RenderManager;
 struct ResourceManager;
@@ -17,19 +18,15 @@ class Game
 	ResourceManager& m_resourceManager;
 
 public:
-	//Teemu Code Begin.
 
-	// float timer; <- can be used in delta time
-	// float updateInterval; <- check Game.h
-
-	int width;
-	int height;
+	unsigned int m_width;
+	unsigned int m_height;
 
 	Game(ResourceManager& resourceManager);
 	~Game();
-	bool Enter(int& width, int& height, std::string& title);
-	void Update(double dt);
-	void Render(RenderManager& rendererManager);
+	bool Enter(unsigned int& p_width, unsigned int& p_height, std::string& p_title);
+	const void Update();
+	const void Render(RenderManager& rendererManager);
 	void OnKeyDown(KeyCode key);
 	void OnKeyUp(KeyCode key);
 };

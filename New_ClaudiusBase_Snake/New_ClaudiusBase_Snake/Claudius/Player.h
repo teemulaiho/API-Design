@@ -23,11 +23,11 @@ struct Player
 	Transform trans;
 	Color color;
 	Rectangle rect;
-	void OnKeyDown(KeyCode key);
-	void Initialize();
-	void Render(RenderManager& renderManager);				// A reference or pointer doesn't need to be #include, just a forward declare.
-	void Update(double dt);
-	void ResetPlayer();
+	const void OnKeyDown(KeyCode key);
+	const void Initialize();
+	const void Render(RenderManager& renderManager);				// A reference or pointer doesn't need to be #include, just a forward declare.
+	const void Update();
+	const void ResetPlayer();
 
 	int size = 10;
 	const float movement_speed = 10.0f;
@@ -43,5 +43,5 @@ struct Player
 	float x_array_difference[player_size] = {};
 	float y_array_difference[player_size] = {};
 
-	int player_score = 0;
+	unsigned int player_score = 0;
 };

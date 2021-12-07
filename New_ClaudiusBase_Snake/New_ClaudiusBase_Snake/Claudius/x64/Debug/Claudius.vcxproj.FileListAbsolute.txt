@@ -1,0 +1,2 @@
+C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Build\x64\Debug\Claudius.exe.lastcodeanalysissucceeded
+C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\x64\Debug\NativeCodeAnalysis.read.1.tlog

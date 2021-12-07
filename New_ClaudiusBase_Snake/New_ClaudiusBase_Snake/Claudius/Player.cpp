@@ -3,14 +3,14 @@
 #include "RenderManager.h"
 #include <iostream>
 
-void Player::Initialize()
+const void Player::Initialize()
 {
 	color.SetColor(0,255,0,0);
 	rect.SetBounds(0, 0, size, size);
 	trans.SetPosition(starting_x, starting_y);
 	player_score = 0;
 
-	for (int i = 0; i < player_size; i++)
+	for (size_t i = 0; i < player_size; i++)
 	{
 		parts[i].color.SetColor(255, 0, 0, 0);
 		parts[i].rect.SetBounds(0, 0, size, size);
@@ -18,22 +18,22 @@ void Player::Initialize()
 	}
 }
 
-void Player::Render(RenderManager& renderManager)
+const void Player::Render(RenderManager& renderManager)
 {
 	renderManager.Render(rect, color, trans);
 
-	for (int i = 0; i < player_score; i++)
+	for (size_t i = 0; i < player_score; i++)
 	{
 		renderManager.Render(parts[i].rect, parts[i].color, parts[i].trans);
 	}
 }
 
-void Player::Update(double dt)
+const void Player::Update()
 {
 	x_array_difference[0] = trans.GetX() - parts[0].trans.GetX();
 	y_array_difference[0] = trans.GetY() - parts[0].trans.GetY();
 
-	for (int i = 1; i < (player_size - 1); i++)
+	for (size_t i = 1; i < (player_size - 1); i++)
 	{
 			x_array_difference[i] = parts[i].trans.GetX() - parts[i + 1].trans.GetX();
 			y_array_difference[i] = parts[i].trans.GetY() - parts[i + 1].trans.GetY();
@@ -54,7 +54,7 @@ void Player::Update(double dt)
 		trans.ChangePosition(movement_speed, 0);
 		parts[0].trans.ChangePosition(x_array_difference[0], y_array_difference[0]);
 
-		for (int i = 1; i < player_size; i++)
+		for (size_t i = 1; i < player_size; i++)
 		{
 			parts[i].trans.ChangePosition(x_array_difference[i - 1], y_array_difference[i - 1]);
 		}
@@ -64,7 +64,7 @@ void Player::Update(double dt)
 		trans.ChangePosition(0, -movement_speed);
 		parts[0].trans.ChangePosition(x_array_difference[0], y_array_difference[0]);
 
-		for (int i = 1; i < player_size; i++)
+		for (size_t i = 1; i < player_size; i++)
 		{
 			parts[i].trans.ChangePosition(x_array_difference[i - 1], y_array_difference[i - 1]);
 		}
@@ -74,14 +74,14 @@ void Player::Update(double dt)
 		trans.ChangePosition(0, movement_speed);
 		parts[0].trans.ChangePosition(x_array_difference[0], y_array_difference[0]);
 
-		for (int i = 1; i < player_size; i++)
+		for (size_t i = 1; i < player_size; i++)
 		{
 			parts[i].trans.ChangePosition(x_array_difference[i - 1], y_array_difference[i - 1]);
 		}
 	}
 }
 
-void Player::OnKeyDown(KeyCode key)
+const void Player::OnKeyDown(KeyCode key)
 {
 	if (key == KeyCode::LEFT_ARROW)
 	{
@@ -113,7 +113,7 @@ void Player::OnKeyDown(KeyCode key)
 	}
 }
 
-void Player::ResetPlayer()
+const void Player::ResetPlayer()
 {
 	player_score = 0;
 	moving_right = false;

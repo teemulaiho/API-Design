@@ -4,7 +4,7 @@
 #include "RenderManager.h"
 #include <iostream>
 
-Game::Game(ResourceManager& resourceManager) : m_resourceManager(resourceManager), width(1250), height(700)
+Game::Game(ResourceManager& resourceManager) : m_resourceManager(resourceManager), m_width(500), m_height(500)
 {
 	//Player test, moving two players to collide with each other.
 	playerOne.Initialize();
@@ -15,28 +15,20 @@ Game::~Game()
 {
 }
 
-bool Game::Enter(int& width, int& height, std::string& title)
+bool Game::Enter(unsigned int& p_width, unsigned int& p_height, std::string& p_title)
 {
-	width = this->width;	//1250
-	height = this->height;	// 700
-	title = "Snake";
+	p_width = this->m_width;	
+	p_height = this->m_height;	
+	p_title = "Snake";
 	return true;
 }
 
-void Game::Update(double dt)
+const void Game::Update()
 {
-	// dt means delta time.
-	// timer += dt; <- check Game.h
-	// if (timer > updateInterval)
-	//{
-	// update snake movement
-	// timer = 0.0f; or timer -= updateInterval;
-	//}
-
-	playerOne.Update(dt);
+	playerOne.Update();
 
 	// Player colliding on theirself.
-	for (int i = 0; i < playerOne.player_score; i++)
+	for (size_t i = 0; i < playerOne.player_score; i++)
 	{
 		if (playerOne.trans.GetPosition() == playerOne.parts[i].trans.GetPosition())
 		{
@@ -45,13 +37,13 @@ void Game::Update(double dt)
 	}
 
 	// Player going out of X bounds.
-	if (playerOne.trans.GetX() > width || playerOne.trans.GetX() < 0)
+	if (playerOne.trans.GetX() > m_width || playerOne.trans.GetX() < 0)
 	{
 		playerOne.ResetPlayer();
 	}
 
 	// Player going out of Y bounds.
-	if (playerOne.trans.GetY() > height || playerOne.trans.GetY() < 0)
+	if (playerOne.trans.GetY() > m_height || playerOne.trans.GetY() < 0)
 	{
 		playerOne.ResetPlayer();
 	}
@@ -60,11 +52,11 @@ void Game::Update(double dt)
 	if (playerOne.trans.GetPosition() == apple.trans.GetPosition())
 	{
 		playerOne.player_score++;
-		apple.trans.SetPosition((rand() % 125) * 10.0f, (rand() % 70) * 10.0f);
+		apple.trans.SetPosition((rand() % m_width / 10) * 10, (rand() % m_height / 10) * 10);
 	}
 }
 
-void Game::Render(RenderManager& renderManager)
+const void Game::Render(RenderManager& renderManager)
 {
 	playerOne.Render(renderManager);
 	apple.Render(renderManager);

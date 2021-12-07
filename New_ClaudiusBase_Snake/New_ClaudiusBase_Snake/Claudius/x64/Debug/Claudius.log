@@ -1,1 +1,9 @@
-﻿
+﻿  Game.cpp
+C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Game.cpp(55,82): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
+C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Game.cpp(55,51): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
+C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Game.cpp(70,28): warning C4100: 'key': unreferenced formal parameter
+  Player.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  Claudius.vcxproj -> C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Build\x64\Debug\Claudius.exe
+C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\External\SDL2\include\SDL_rect.h(76): warning C26812: The enum type 'SDL_bool' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).

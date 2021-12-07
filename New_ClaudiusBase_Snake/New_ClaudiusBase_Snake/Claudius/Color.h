@@ -1,12 +1,16 @@
 #pragma once
+#include "SDL_stdinc.h"
 
 struct Color
 {
-	unsigned char r, g, b, a;
+	Uint8 m_r;
+	Uint8 m_g;
+	Uint8 m_b;
+	Uint8 m_a;
 
 	Color();
 	Color(const Color& rhs);
-	Color(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
+	Color(Uint8 p_r, Uint8 p_g, Uint8 p_b, Uint8 p_a);
 
-	void SetColor(unsigned char r, unsigned char g, unsigned char b, unsigned char a);
+	void SetColor(Uint8 p_r, Uint8 p_g, Uint8 p_b, Uint8 p_a);
 };

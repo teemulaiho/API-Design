@@ -1,18 +1,18 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle() : x(0), y(0), w(0), h(0)
+Rectangle::Rectangle() : m_x(0), m_y(0), m_w(0), m_h(0)
 {
 }
 
-Rectangle::Rectangle(const Rectangle& rhs) : x(rhs.x), y(rhs.y), w(rhs.w), h(rhs.h)
+Rectangle::Rectangle(const Rectangle& rhs) : m_x(rhs.m_x), m_y(rhs.m_y), m_w(rhs.m_w), m_h(rhs.m_h)
 {
 }
 
-Rectangle::Rectangle(int x, int y, int w, int h) : x(x), y(y), w(w), h(h)
+Rectangle::Rectangle(int p_x, int p_y, int p_w, int p_h) : m_x(p_x), m_y(p_y), m_w(p_w), m_h(p_h)
 {
 }
 
-void Rectangle::SetBounds(int x, int y, int w, int h)
+void Rectangle::SetBounds(int p_x, int p_y, int p_w, int p_h)
 {
-	this->x = x; this->y = y; this->w = w; this->h = h;
+	this->m_x = p_x; this->m_y = p_y; this->m_w = p_w; this->m_h = p_h;
 }

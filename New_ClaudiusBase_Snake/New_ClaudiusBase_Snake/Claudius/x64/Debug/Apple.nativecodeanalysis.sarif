@@ -1,0 +1,613 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30137.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00E4C1B0 -il C:\\Users\\teemu\\AppData\\Local\\Temp\\_CL_be973695ast -typedil -f Apple.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930137 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -I C:\\Users\\teemu\\source\\repos\\API Design\\API-Design\\New_ClaudiusBase_Snake\\New_ClaudiusBase_Snake\\External\\SDL2\\include -nologo -W 4 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_MBCS -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -std:c++20 -Fox64\\Debug\\Apple.obj -Fdx64\\Debug\\vc142.pdb -external:W 4 -Gd -analyze:projectdirectory C:\\Users\\teemu\\source\\repos\\API Design\\API-Design\\New_ClaudiusBase_Snake\\New_ClaudiusBase_Snake\\Claudius -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/vector2.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "7e274a98f793b3322d0676db448d2a6b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/vector2.h"
+          },
+          "hashes": {
+            "md5": "ce05328abf28c237613cfdc0a4471e83"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/transform.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "2d419ce46e2789c5d5bb29fd60d7aff5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/transform.h"
+          },
+          "hashes": {
+            "md5": "fb686a7e28d0700d607ab3ba4e9177e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/sprite.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "e96accd36ac1eff654830b2df448c34a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/sprite.h"
+          },
+          "hashes": {
+            "md5": "af8133f8632b50c6967f1c272432dc08"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/rectangle.h"
+          },
+          "hashes": {
+            "md5": "3e6ea5859bba606415160200dcd75dcb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/color.h"
+          },
+          "hashes": {
+            "md5": "cfeb8e5803a39a327eabccbd394c5266"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_stdinc.h"
+          },
+          "hashes": {
+            "md5": "a1ff68bd34e8ab5c832f7c777d247eb0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_config.h"
+          },
+          "hashes": {
+            "md5": "da465f8bfe25475fc2cb906e03fe9b62"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_platform.h"
+          },
+          "hashes": {
+            "md5": "16ed35243597281333bfd659f3529e9a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/begin_code.h"
+          },
+          "hashes": {
+            "md5": "3c605cf4c18094bad63707b22ed076c7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/close_code.h"
+          },
+          "hashes": {
+            "md5": "4b147c4e3a6a6d05d0e81a658ec0d82a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/rectangle.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "f1d0559b3ef4409010bf4ec69793fdd0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/player.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "7b758f53740c1c7ea80394f207fc5280"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/player.h"
+          },
+          "hashes": {
+            "md5": "b6f5ef3a137264ed450285566980d61c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/keycode.h"
+          },
+          "hashes": {
+            "md5": "f325984fc9d8fee7b4fa33d299c1a6f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/rendermanager.h"
+          },
+          "hashes": {
+            "md5": "66af2e4a8ab0972fa66d8411f8e1c0cd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/teemu/source/repos/API Design/API-Design/New_ClaudiusBase_Snake/New_ClaudiusBase_Snake/External/SDL2/include/SDL_rect.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "010be0a51fc3bb2533ced5e6107c4bc5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/main.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "83a31c8e8662d4d3be99cc4e2feaabfc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl.h"
+          },
+          "hashes": {
+            "md5": "3f55c040da1a69ae201fa184bebeea99"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_main.h"
+          },
+          "hashes": {
+            "md5": "0a79027d63346cb44bef0c8de3d37d54"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_assert.h"
+          },
+          "hashes": {
+            "md5": "701be8ef6718c0f6843aadf0d6c846eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_atomic.h"
+          },
+          "hashes": {
+            "md5": "c40de0c18cd2b52735a9340639f95c66"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_audio.h"
+          },
+          "hashes": {
+            "md5": "7063e44a0db5f9533cef7f201910620c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_error.h"
+          },
+          "hashes": {
+            "md5": "75644db558ce33b8d9f006f241709125"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_endian.h"
+          },
+          "hashes": {
+            "md5": "d428ca9213f7f3fadf13653dcfeb1f75"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_mutex.h"
+          },
+          "hashes": {
+            "md5": "7a1aee12499aaf2356827da27fd1eb20"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_thread.h"
+          },
+          "hashes": {
+            "md5": "b31b28ee7c843126bd2d4651cd348044"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_rwops.h"
+          },
+          "hashes": {
+            "md5": "600da45f2f3e3125174d8cdc2b11e138"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_clipboard.h"
+          },
+          "hashes": {
+            "md5": "05e75cc05a01a3f45114727c9c371b86"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_cpuinfo.h"
+          },
+          "hashes": {
+            "md5": "ec5cbc8b0bd9744a3ff2cacc69f4345a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_events.h"
+          },
+          "hashes": {
+            "md5": "863fa6ce617e31cd609ccac504cb8688"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_video.h"
+          },
+          "hashes": {
+            "md5": "a68a5013c6403d0e4ba45ce3fd6977cf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_pixels.h"
+          },
+          "hashes": {
+            "md5": "6d98357eb4c4b22b7cc317d8a62e26a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_surface.h"
+          },
+          "hashes": {
+            "md5": "3c89e6fd6a85092ec7d36dc9f843d3f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_blendmode.h"
+          },
+          "hashes": {
+            "md5": "dbc94e5bfb8b1aaf3c3e954cd35e7df3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_keyboard.h"
+          },
+          "hashes": {
+            "md5": "2399613e0a9eac734039dc6c5d3b14de"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_keycode.h"
+          },
+          "hashes": {
+            "md5": "e5b96836be82f801d571c8f39b7d1670"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_scancode.h"
+          },
+          "hashes": {
+            "md5": "5dc6d1f8da5f05ca3a6ac8bb011fd544"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_mouse.h"
+          },
+          "hashes": {
+            "md5": "7a613c78f18ff2e5596de94eff50489f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_joystick.h"
+          },
+          "hashes": {
+            "md5": "c7103ee6855a2abcc47501fe6561d643"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_gamecontroller.h"
+          },
+          "hashes": {
+            "md5": "27fd7b115a3a1ae7fe801d75d7ef556d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_quit.h"
+          },
+          "hashes": {
+            "md5": "9f7ff46e99a00908885caec380cacffe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_gesture.h"
+          },
+          "hashes": {
+            "md5": "55cf690f9f1121ff76c11f864de70fe1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_touch.h"
+          },
+          "hashes": {
+            "md5": "74017265ea0ad814cef9e979fcce8c7a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_filesystem.h"
+          },
+          "hashes": {
+            "md5": "99b3198b358abceb17e7a0812b8f59e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_haptic.h"
+          },
+          "hashes": {
+            "md5": "39ebfbccd5ba7a083138abbe98ca0ab9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_hints.h"
+          },
+          "hashes": {
+            "md5": "db05abe3ef526f82a11eaa55369b30e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_loadso.h"
+          },
+          "hashes": {
+            "md5": "b29c2d0869e1ae08a2e7981c8fb805ef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_log.h"
+          },
+          "hashes": {
+            "md5": "94379fdabe1b57c660017e84032c301a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_messagebox.h"
+          },
+          "hashes": {
+            "md5": "c8a305930f71529610cec127a92c6fb2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_power.h"
+          },
+          "hashes": {
+            "md5": "351fb6df00bf5de74c2efc444e1e7f8f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_render.h"
+          },
+          "hashes": {
+            "md5": "af7a16e6b468e2f9c32d7ff031ec9456"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_sensor.h"
+          },
+          "hashes": {
+            "md5": "f1bdd638f653ac833cd6f8f442688905"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_shape.h"
+          },
+          "hashes": {
+            "md5": "a1f7ab547558f3bf3e544f0310777f0c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_system.h"
+          },
+          "hashes": {
+            "md5": "4057c1d9baf02d99da1690b690635604"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_timer.h"
+          },
+          "hashes": {
+            "md5": "3b32d166c66c3ff18ea24f1f26bbf26b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/external/sdl2/include/sdl_version.h"
+          },
+          "hashes": {
+            "md5": "428c422bcfe93b9370eec2cb7c0a04fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/resourcemanager.h"
+          },
+          "hashes": {
+            "md5": "8416380f589fb4c704cf8f7ad747e004"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/game.h"
+          },
+          "hashes": {
+            "md5": "c5bebb207571aa033f53262c91a7aca7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/apple.h"
+          },
+          "hashes": {
+            "md5": "b14830d3b61e70fda69bf1e3f71b4ac4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/image.h"
+          },
+          "hashes": {
+            "md5": "000617b65f8f5f42f5052c39456f335d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/image.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "e530bf86a4d44bbd7d42a9942a63279d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/game.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "22a346691e3985af2941daca6d652bb6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/color.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "a385f7c877fec87ee316e5376abf72f6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/collider.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "3afd6698c9489bb829386a21018ac20e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/collider.h"
+          },
+          "hashes": {
+            "md5": "f16827fc821f5da17afa0567970dda36"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/teemu/source/repos/api design/api-design/new_claudiusbase_snake/new_claudiusbase_snake/claudius/apple.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "1df9eecd9dd35eff37cafe1c2daefeb8"
+          }
+        }
+      ]
+    }
+  ]
+}

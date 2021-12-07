@@ -15,11 +15,11 @@ struct Sprite
 	Sprite(Rectangle source, char r, char g, char b, char a, Image& image);
 	Sprite(int x, int y, int w, int h, char r, char g, char b, char a, Image& image);
 	
-	void SetImage(Image& image);
+	void SetImage(Image& p_image);
 	void SetSource(int x, int y, int w, int h);
 	void SetColor(char r, char g, char b, char a);
 
 	Rectangle source;
 	Color color;
-	const Image* image;
+	const Image* m_image;
 };

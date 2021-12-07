@@ -1,28 +1,28 @@
 #include "Image.h"
 
-Image::Image() : id(-1), width(0), height(0)
+Image::Image() : m_id(-1), m_width(0), m_height(0)
 {
 }
 
-Image::Image(const Image& rhs) : id(rhs.id), width(rhs.width), height(rhs.height)
+Image::Image(const Image& rhs) : m_id(rhs.m_id), m_width(rhs.m_width), m_height(rhs.m_height)
 {
 }
 
-Image::Image(unsigned int id, int width, int height) : id(id), width(width), height(height)
+Image::Image(unsigned int p_id, int p_width, int p_height) : m_id(p_id), m_width(p_width), m_height(p_height)
 {
 }
 
-unsigned int Image::GetID()
+int Image::GetID()
 {
-	return id;
+	return m_id;
 }
 
-int Image::GetWidth()
+unsigned int Image::GetWidth()
 {
-	return width;
+	return m_width;
 }
 
-int Image::GetHeight()
+unsigned int Image::GetHeight()
 {
-	return height;
+	return m_height;
 }

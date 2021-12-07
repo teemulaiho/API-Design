@@ -32,7 +32,7 @@ bool ResourceManager::LoadImageFromFile(Image& image, const std::string &filePat
 	{
 		if ((*it).first == filePath)
 		{
-			image.id = index;
+			image.m_id = index;
 			return true;
 		}
 		it++;
@@ -45,9 +45,9 @@ bool ResourceManager::LoadImageFromFile(Image& image, const std::string &filePat
 		if (texture != nullptr)
 		{
 			impl.textures.push_back(std::pair<std::string, SDL_Texture*>(filePath, texture));
-			image.id = static_cast<unsigned int>(impl.textures.size() - 1);
-			image.width = surface->w;
-			image.height = surface->h;
+			image.m_id = static_cast<unsigned int>(impl.textures.size() - 1);
+			image.m_width = surface->w;
+			image.m_height = surface->h;
 			return true;
 		}
 		else
@@ -152,8 +152,8 @@ int main()
 	ResourceManager resourceManager(resourceImpl);
 	Game game(resourceManager);
 
-	int width = 500;
-	int height = 500;
+	unsigned int width = 500;
+	unsigned height = 500;
 	std::string title = "";
 	game.Enter(width, height, title);
 	SDL_SetWindowSize(window, width, height);
@@ -174,39 +174,39 @@ int main()
 			}
 		}
 
-		game.Update(dt);
+		game.Update();
 		game.Render(renderManager);
 
 		SDL_SetRenderDrawColor(renderer,0,0,0,0);
 		SDL_RenderClear(renderer);
 		for (auto &&entry : renderManager.spriteEntries)
 		{
-			if (entry.sprite.image != nullptr)
+			if (entry.sprite.m_image != nullptr)
 			{
-				SDL_Rect src{ entry.sprite.source.x, entry.sprite.source.y, entry.sprite.source.w, entry.sprite.source.h };
-				SDL_Rect dst{ static_cast<int>(entry.trans.position.x),
-							  static_cast<int>(entry.trans.position.y),
-							  static_cast<int>(entry.sprite.image->width),
-							  static_cast<int>(entry.sprite.image->height) };
-				SDL_RenderCopy(renderer, resourceImpl.GetTexture(entry.sprite.image->id), &src, &dst);
+				SDL_Rect src{ entry.sprite.source.m_x, entry.sprite.source.m_y, entry.sprite.source.m_w, entry.sprite.source.m_h };
+				SDL_Rect dst{ static_cast<int>(entry.trans.m_position.x),
+							  static_cast<int>(entry.trans.m_position.y),
+							  static_cast<int>(entry.sprite.m_image->m_width),
+							  static_cast<int>(entry.sprite.m_image->m_height) };
+				SDL_RenderCopy(renderer, resourceImpl.GetTexture(entry.sprite.m_image->m_id), &src, &dst);
 			}
 			else
 			{
-				SDL_SetRenderDrawColor(renderer, entry.sprite.color.r, entry.sprite.color.g, entry.sprite.color.b, entry.sprite.color.a);
-				SDL_Rect rect{ static_cast<int>(entry.trans.position.x),
-							   static_cast<int>(entry.trans.position.y),
-							   entry.sprite.source.w,
-							   entry.sprite.source.h };
+				SDL_SetRenderDrawColor(renderer, entry.sprite.color.m_r, entry.sprite.color.m_g, entry.sprite.color.m_b, entry.sprite.color.m_a);
+				SDL_Rect rect{ static_cast<int>(entry.trans.m_position.x),
+							   static_cast<int>(entry.trans.m_position.y),
+							   entry.sprite.source.m_w,
+							   entry.sprite.source.m_h };
 				SDL_RenderDrawRect(renderer, &rect);
 			}
 		}
 		for (auto&& entry : renderManager.rectEntries)
 		{
-			SDL_SetRenderDrawColor(renderer, entry.color.r, entry.color.g, entry.color.b, entry.color.a);
-			SDL_Rect rect{ static_cast<int>(entry.trans.position.x),
-						   static_cast<int>(entry.trans.position.y),
-						   entry.rect.w,
-						   entry.rect.h };
+			SDL_SetRenderDrawColor(renderer, entry.color.m_r, entry.color.m_g, entry.color.m_b, entry.color.m_a);
+			SDL_Rect rect{ static_cast<int>(entry.trans.m_position.x),
+						   static_cast<int>(entry.trans.m_position.y),
+						   entry.rect.m_w,
+						   entry.rect.m_h };
 			//SDL_RenderDrawRect(renderer, &rect);	// <- If you want to draw the "outline" of the rectangle.
 			SDL_RenderFillRect(renderer, &rect);  // <- If you want to draw a "filled" rectangle. 
 		}
