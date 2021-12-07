@@ -1,4 +1,4 @@
-#pragma once		// #pragma once == Compile this file once.
+#pragma once		
 
 #include "Transform.h"
 #include "Color.h"
@@ -6,6 +6,14 @@
 #include "KeyCode.h"
 
 struct RenderManager;
+
+enum class MovementDirection {
+	None,
+	Up,
+	Right,
+	Down,
+	Left
+};
 
 struct Player
 {
@@ -16,7 +24,6 @@ struct Player
 		Rectangle rect;
 	};
 
-	//Static == belongs to the class, not the object of the class.
 	static const int player_size = 50;
 	PlayerPart parts[player_size];
 	
@@ -25,14 +32,17 @@ struct Player
 	Rectangle rect;
 	const void OnKeyDown(KeyCode key);
 	const void Initialize();
-	const void Render(RenderManager& renderManager);				// A reference or pointer doesn't need to be #include, just a forward declare.
+	const void Render(RenderManager& renderManager);				
 	const void Update();
 	const void ResetPlayer();
 
-	int size = 10;
-	const float movement_speed = 10.0f;
-	const float starting_x = 300.0f;
-	const float starting_y = 300.0f;
+
+	int m_size = 10;
+	const float m_movement_speed = 10.0f;
+	const float m_starting_x = 300.0f;
+	const float m_starting_y = 300.0f;
+
+	MovementDirection m_direction;
 
 	bool moving_right = false;
 	bool moving_left = false;
@@ -40,8 +50,8 @@ struct Player
 	bool moving_down = false;
 	bool new_snake = false;
 
-	float x_array_difference[player_size] = {};
-	float y_array_difference[player_size] = {};
+	float m_x_array_difference[player_size] = {};
+	float m_y_array_difference[player_size] = {};
 
-	unsigned int player_score = 0;
+	unsigned int m_player_score = 0;
 };

@@ -1,12 +1,9 @@
-// 2019-12-05 Teemu Laiho
-
 #include "Game.h"
 #include "RenderManager.h"
 #include <iostream>
 
 Game::Game(ResourceManager& resourceManager) : m_resourceManager(resourceManager), m_width(500), m_height(500)
 {
-	//Player test, moving two players to collide with each other.
 	playerOne.Initialize();
 	apple.Initialize(10, 10);
 }
@@ -28,7 +25,7 @@ const void Game::Update()
 	playerOne.Update();
 
 	// Player colliding on theirself.
-	for (size_t i = 0; i < playerOne.player_score; i++)
+	for (size_t i = 0; i < playerOne.m_player_score; i++)
 	{
 		if (playerOne.trans.GetPosition() == playerOne.parts[i].trans.GetPosition())
 		{
@@ -51,7 +48,7 @@ const void Game::Update()
 	// Player collide on apple.
 	if (playerOne.trans.GetPosition() == apple.trans.GetPosition())
 	{
-		playerOne.player_score++;
+		playerOne.m_player_score++;
 		apple.trans.SetPosition((rand() % m_width / 10) * 10, (rand() % m_height / 10) * 10);
 	}
 }

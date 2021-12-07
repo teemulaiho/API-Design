@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DEFECTS></DEFECTS>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\</FILEPATH>
+      <FILENAME>Player.h</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Player::m_direction' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Player::{ctor}</FUNCTION>
+    <DECORATED>??0Player@@QEAA@XZ</DECORATED>
+    <FUNCLINE>57</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Player::m_direction</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
