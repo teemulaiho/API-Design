@@ -30,54 +30,36 @@ const void Player::Render(RenderManager& renderManager)
 
 const void Player::Update()
 {
+	int movement_input_x = 0;
+	int movement_input_y = 0;
+
 	m_x_array_difference[0] = trans.GetX() - parts[0].trans.GetX();
 	m_y_array_difference[0] = trans.GetY() - parts[0].trans.GetY();
 
-	for (size_t i = 1; i < (player_size - 1); i++)
-	{
+	for (size_t i = 1; i < (player_size - 1); i++) {
 			m_x_array_difference[i] = parts[i].trans.GetX() - parts[i + 1].trans.GetX();
 			m_y_array_difference[i] = parts[i].trans.GetY() - parts[i + 1].trans.GetY();
 	}
 
-	if (m_direction == MovementDirection::Left)
-	{
-		trans.ChangePosition(-m_movement_speed, 0);
-		parts[0].trans.ChangePosition(m_x_array_difference[0], m_y_array_difference[0]);
-
-		for (int i = 1; i < player_size; i++)
-		{
-			parts[i].trans.ChangePosition(m_x_array_difference[i - 1], m_y_array_difference[i - 1]);
-		}
+	if (m_direction == MovementDirection::Left) {
+		movement_input_x = -1;
 	}
-	else if (m_direction == MovementDirection::Right)
-	{
-		trans.ChangePosition(m_movement_speed, 0);
-		parts[0].trans.ChangePosition(m_x_array_difference[0], m_y_array_difference[0]);
-
-		for (size_t i = 1; i < player_size; i++)
-		{
-			parts[i].trans.ChangePosition(m_x_array_difference[i - 1], m_y_array_difference[i - 1]);
-		}
+	else if (m_direction == MovementDirection::Right) {
+		movement_input_x = 1;
 	}
-	else if (m_direction == MovementDirection::Up)
-	{
-		trans.ChangePosition(0, -m_movement_speed);
-		parts[0].trans.ChangePosition(m_x_array_difference[0], m_y_array_difference[0]);
-
-		for (size_t i = 1; i < player_size; i++)
-		{
-			parts[i].trans.ChangePosition(m_x_array_difference[i - 1], m_y_array_difference[i - 1]);
-		}
+	else if (m_direction == MovementDirection::Up) {
+		movement_input_y = 1;
 	}
-	else if (m_direction == MovementDirection::Down)
-	{
-		trans.ChangePosition(0, m_movement_speed);
-		parts[0].trans.ChangePosition(m_x_array_difference[0], m_y_array_difference[0]);
+	else if (m_direction == MovementDirection::Down) {
+		movement_input_y = -1;
+	}
 
-		for (size_t i = 1; i < player_size; i++)
-		{
-			parts[i].trans.ChangePosition(m_x_array_difference[i - 1], m_y_array_difference[i - 1]);
-		}
+	trans.ChangePosition(movement_input_x * m_movement_speed, movement_input_y * m_movement_speed);
+	parts[0].trans.ChangePosition(m_x_array_difference[0], m_y_array_difference[0]);
+
+	for (size_t i = 1; i < player_size; i++)
+	{
+		parts[i].trans.ChangePosition(m_x_array_difference[i - 1], m_y_array_difference[i - 1]);
 	}
 }
 

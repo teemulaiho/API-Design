@@ -1,16 +1,22 @@
-﻿  Game.cpp
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Game.cpp(52,82): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Game.cpp(52,51): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Game.cpp(67,28): warning C4100: 'key': unreferenced formal parameter
-  Player.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(495,5): warning MSB8003: The WindowsSDKDir property is not defined. Some build tools may not be found.
+  Apple.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h(12,10): fatal error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  Collider.cpp
+  Color.cpp
+C:\Users\teemu\Documents\GitHub\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\External\SDL2\include\SDL_stdinc.h(50,12): fatal error C1083: Cannot open include file: 'stddef.h': No such file or directory
+  Game.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h(12,10): fatal error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  Image.cpp
   main.cpp
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\main.cpp(55,16): warning C4189: 'error': local variable is initialized but not referenced
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\main.cpp(61,15): warning C4189: 'error': local variable is initialized but not referenced
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\main.cpp(163,8): warning C4189: 'dt': local variable is initialized but not referenced
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\main.cpp(139,15): warning C4189: 'error': local variable is initialized but not referenced
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\main.cpp(145,15): warning C4189: 'error': local variable is initialized but not referenced
+C:\Users\teemu\Documents\GitHub\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\External\SDL2\include\SDL_stdinc.h(50,12): fatal error C1083: Cannot open include file: 'stddef.h': No such file or directory
+  Player.cpp
+C:\Users\teemu\Documents\GitHub\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\External\SDL2\include\SDL_stdinc.h(50,12): fatal error C1083: Cannot open include file: 'stddef.h': No such file or directory
+  Rectangle.cpp
+  Sprite.cpp
+C:\Users\teemu\Documents\GitHub\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\External\SDL2\include\SDL_stdinc.h(50,12): fatal error C1083: Cannot open include file: 'stddef.h': No such file or directory
+  Transform.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h(12,10): fatal error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
+  Vector2.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\yvals.h(12,10): fatal error C1083: Cannot open include file: 'crtdbg.h': No such file or directory
   Running Code Analysis for C/C++...
   Generating Code...
-  Claudius.vcxproj -> C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Build\x64\Debug\Claudius.exe
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\Claudius\Player.h(57): warning C26495: Variable 'Player::m_direction' is uninitialized. Always initialize a member variable (type.6).
-C:\Users\teemu\source\repos\API Design\API-Design\New_ClaudiusBase_Snake\New_ClaudiusBase_Snake\External\SDL2\include\SDL_rect.h(76): warning C26812: The enum type 'SDL_bool' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).
